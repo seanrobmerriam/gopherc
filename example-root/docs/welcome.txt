@@ -1,0 +1,3 @@
+Welcome to the hardened sample Gopher server.
+This file is served as a type 0 text item.
+.Leading periods are dot-stuffed on the wire.
