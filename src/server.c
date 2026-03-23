@@ -17,6 +17,10 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
+#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+int initgroups(const char *, gid_t);
+#endif
+
 static volatile sig_atomic_t stop_requested = 0;
 static volatile sig_atomic_t child_exit_pending = 0;
 
